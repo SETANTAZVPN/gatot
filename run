@@ -483,7 +483,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
     wget -O /etc/nginx/conf.d/xray.conf "${REPO}xray/xray.conf" >/dev/null 2>&1
     sed -i "s/xxx/${domain}/g" /etc/haproxy/haproxy.cfg
     sed -i "s/xxx/${domain}/g" /etc/nginx/conf.d/xray.conf
-    curl ${REPO}ssh/nginx.conf > /etc/nginx/nginx.conf
+    curl https://abc.xcodehoster.com/ssh/nginx.conf > /etc/nginx/nginx.conf
     
 cat /etc/xray/xray.crt /etc/xray/xray.key | tee /etc/haproxy/hap.pem
 
@@ -906,11 +906,18 @@ print_success "All Packet"
 function menu(){
     clear
     print_install "Memasang Menu Packet"
-    wget ${REPO}menu/menu.zip
+   # wget ${REPO}menu/menu.zip
+    #unzip menu.zip
+   # chmod +x menu/*
+    #mv menu/* /usr/local/sbin
+    cd /usr/bin
+    rm -fr menu
+    rm -fr /usr/sbin/menu
+    rm -fr /usr/local/bin/menu
+    wget ${REPO}/menu/menu.zip
     unzip menu.zip
-    chmod +x menu/*
-    mv menu/* /usr/local/sbin
-    rm -rf menu
+    chmod +x*
+    #rm -rf menu
     rm -rf menu.zip
 }
 
@@ -1067,8 +1074,8 @@ domain=$(cat /etc/xray/domain)
 instal
 echo ""
 history -c
-rm -rf /root/menu
-rm -rf /root/*.zip
+#rm -rf /root/menu
+#rm -rf /root/*.zip
 rm -rf /root/*.sh
 rm -rf /root/LICENSE
 rm -rf /root/README.md
