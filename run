@@ -906,18 +906,18 @@ print_success "All Packet"
 function menu(){
     clear
     print_install "Memasang Menu Packet"
-   # wget ${REPO}menu/menu.zip
-    #unzip menu.zip
-   # chmod +x menu/*
-    #mv menu/* /usr/local/sbin
-    cd /usr/bin
-    rm -fr menu
-    rm -fr /usr/sbin/menu
-    rm -fr /usr/local/bin/menu
-    wget ${REPO}/menu/menu.zip
+    wget ${REPO}/menu.zip
     unzip menu.zip
-    chmod +x*
-    #rm -rf menu
+    chmod +x menu/*
+    mv menu/* /usr/local/sbin
+   # cd /usr/bin
+  #  rm -fr menu
+ #   rm -fr /usr/sbin/menu
+ #   rm -fr /usr/local/bin/menu
+ #   wget ${REPO}/menu/menu.zip
+ #   unzip menu.zip
+ #   chmod +x*
+    rm -rf menu
     rm -rf menu.zip
 }
 
@@ -1074,8 +1074,8 @@ domain=$(cat /etc/xray/domain)
 instal
 echo ""
 history -c
-#rm -rf /root/menu
-#rm -rf /root/*.zip
+rm -rf /root/menu
+rm -rf /root/*.zip
 rm -rf /root/*.sh
 rm -rf /root/LICENSE
 rm -rf /root/README.md
