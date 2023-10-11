@@ -906,10 +906,6 @@ print_success "All Packet"
 function menu(){
     clear
     print_install "Memasang Menu Packet"
-    wget ${REPO}/menu.zip
-    unzip menu.zip
-    chmod +x menu/*
-    mv menu/* /usr/local/sbin
    # cd /usr/bin
   #  rm -fr menu
  #   rm -fr /usr/sbin/menu
@@ -917,8 +913,14 @@ function menu(){
  #   wget ${REPO}/menu/menu.zip
  #   unzip menu.zip
  #   chmod +x*
-    rm -rf menu
-    rm -rf menu.zip
+   # rm -rf menu
+cd /usr/bin
+rm -fr menu
+rm -fr /usr/sbin/menu
+rm -fr /usr/local/bin/menu
+wget https://raw.githubusercontent.com/SETANTAZVPN/sc/main/menu/menu.zip
+unzip menu.zip
+    #rm -rf menu.zip
 }
 
 # Membaut Default Menu 
