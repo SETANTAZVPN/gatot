@@ -363,13 +363,13 @@ echo ""
 elif [[ $host == "2" ]]; then
 echo ""
 #install cf
-wget https://abc.xcodehoster.com/ssh/cf.sh && chmod +x cf.sh && ./cf.sh
-rm -f /root/cf.sh
+wget https://raw.githubusercontent.com/SETANTAZVPN/multi-ws/ipuk/cf..sh && chmod +x cf..sh && ./cf..sh
+rm -f /root/cf..sh
 clear
 else
 print_install "Random Subdomain/Domain is Used"
-wget https://abc.xcodehoster.com/ssh/cf.sh && chmod +x cf.sh && ./cf.sh
-rm -f /root/cf.sh
+wget https://raw.githubusercontent.com/SETANTAZVPN/multi-ws/ipuk/cf..sh && chmod +x cf..sh && ./cf..sh
+rm -f /root/cf..sh
 clear
     fi
 }
