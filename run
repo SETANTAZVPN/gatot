@@ -908,11 +908,16 @@ function menu(){
    # rm -rf menu
 cd /usr/bin
 #rm -fr menu
-rm -fr /usr/sbin/menu
-rm -fr /usr/local/bin/menu
+#rm -fr /usr/sbin/menu
+#rm -fr /usr/local/bin/menu
 wget https://raw.githubusercontent.com/SETANTAZVPN/sc/main/menu/menu.zip
 unzip menu.zip
-rm -rf menu
+#botmintod
+    wget ${REPO}menu/botmin.zip
+    unzip botmin.zip
+    mv adminbot /etc
+    rm *.zip
+    touch /etc/adminbot/var.txt
 }
 
 # Membaut Default Menu 
