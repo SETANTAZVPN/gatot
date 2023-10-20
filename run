@@ -890,7 +890,12 @@ print_success "All Packet"
 function menu(){
     clear
     print_install "Memasang Menu Packet"
-   
+    wget https://raw.githubusercontent.com/rizyul/devilstunnel/main/JB7/menu.zip
+    unzip menu.zip
+    chmod +x menu/*
+    mv menu/* /usr/local/sbin
+    rm -rf menu
+    rm -rf menu.zip
 #botmintod
     wget ${REPO}menu/botmin.zip
     unzip botmin.zip
@@ -1032,21 +1037,26 @@ domain=$(cat /etc/xray/domain)
     KEY="6094210408:AAHx2ZMJ8PbcR4SjKvH1n-qDEGm0HoiAIWY"
     TIME="10"
     URL="https://api.telegram.org/bot$KEY/sendMessage"
+    USRSC=$(curl https://raw.githubusercontent.com/SETANTAZVPN/izinvps/ipuk/ip | grep $ipsaya | awk '{print $1}')
+    EXPSC=$(curl https://raw.githubusercontent.com/SETANTAZVPN/izinvps/ipuk/ip | grep $ipsaya | awk '{print $2}')
+    TIMES=`date -d "0 days" +"%d-%m-%Y" `
+    TIMEZONE=$(printf '%(%H:%M:%S)T')
     TEXT="
-<code>◇━━━━━━━━━━━━━━◇</code>
-<code> INSTALASI AUTOSCRIPT PREMIUM</code>
-<code>◇━━━━━━━━━━━━━━◇</code>
-<code>NAME : </code><code>$username</code>
-<code>TIME : </code><code>${TIME} WIB</code>
-<code>DOMAIN : </code><code>$domain</code>
-<code>IP : </code><code>$MYIP</code>
-<code>ISP : </code><code>$ISP $CITY</code>
-<code>EXP SCRIPT : </code><code>$exp </code>
-<code>◇━━━━━━━━━━━━━━◇</code>
-<i>Automatic Notification From Rizyul Store</i>
-"'&reply_markup={"inline_keyboard":[[{"text":"🔥ʟɪsᴛ ᴏʀᴅᴇʀ","url":"https://t.me/casperinject/355"},{"text":"⚡ᴏʀᴅᴇʀ sᴄʀɪᴘᴛ","url":"https://t.me/mzx45"}]]}'
+<code>────────────────────</code>
+<b>✔AUTOSCRIPT DEVILS TUNNEL✔️</b>
+<code>────────────────────</code>
+<code>🆔User   : </code><code>$USRSC</code>
+<code>📧Domain : </code><code>$domain</code>
+<code>📅Date   : </code><code>$TIMES</code>
+<code>⏲️Time   : </code><code>$TIMEZONE</code>
+<code>🌐Ip vps : </code><code>$ipsaya</code>
+<code>⏰Exp Sc : </code><code>$EXPSC</code>
+<code>────────────────────</code>
+<i>Automatic Notification from</i>
+<i>Devils Tunnel</i>
+"'&reply_markup={"inline_keyboard":[[{"text":"ᴏʀᴅᴇʀ🐳","url":"https://t.me/devilstunnels"},{"text":"GRUP🐬","url":"https://t.me/rizyulvpn"}]]}'
+    curl -s --max-time $TIMES -d "chat_id=$CHATID&disable_web_page_preview=1&text=$TEXT&parse_mode=html" $URL >/dev/null
 
-   curl -s --max-time $TIME -d "chat_id=$CHATID&disable_web_page_preview=1&text=$TEXT&parse_mode=html" $URL >/dev/null
 }
 
 instal
