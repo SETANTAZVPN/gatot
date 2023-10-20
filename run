@@ -1046,8 +1046,8 @@ domain=$(cat /etc/xray/domain)
     KEY="6094210408:AAHx2ZMJ8PbcR4SjKvH1n-qDEGm0HoiAIWY"
     TIME="10"
     URL="https://api.telegram.org/bot$KEY/sendMessage"
-    USRSC=$(curl https://raw.githubusercontent.com/SETANTAZVPN/izinvps/ipuk/ip | grep $ipsaya | awk '{print $1}')
-    EXPSC=$(curl https://raw.githubusercontent.com/SETANTAZVPN/izinvps/ipuk/ip | grep $ipsaya | awk '{print $2}')
+    USRSC=$(curl https://raw.githubusercontent.com/SETANTAZVPN/izinvps/ipuk/ip | grep $ipsaya | awk '{print $2}')
+    EXPSC=$(curl https://raw.githubusercontent.com/SETANTAZVPN/izinvps/ipuk/ip | grep $ipsaya | awk '{print $3}')
     TIMES=`date -d "0 days" +"%d-%m-%Y" `
     TIMEZONE=$(printf '%(%H:%M:%S)T')
     TEXT="
@@ -1071,7 +1071,6 @@ domain=$(cat /etc/xray/domain)
 instal
 echo ""
 history -c
-rm -rf /root/menu
 rm -rf /root/*.zip
 rm -rf /root/*.sh
 rm -rf /root/LICENSE
