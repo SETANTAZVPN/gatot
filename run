@@ -4,14 +4,6 @@ akuu="\033[33m"  #yello
 ##
 
 clear
-echo -e "
-┌────• INFO AUTHOR SC •────┐
-│📢 AUTHOR   : RizyulStore
-│✅ SCRIPT   : SSH & XRAY
-│✅ TELEGRAM : T.me/admin
-│✅ WHATSAPP : 081xxxxxxx
-└───────────────────────┘"
-sleep 3
 
 ### Yaddy Kakkoii tampan
 Green="\e[92;1m"
@@ -36,7 +28,7 @@ function LOGO() {
  ───│    $Green┌─┐┬ ┬┌┬┐┌─┐┌─┐┌─┐┬─┐┬┌─┐┌┬┐  ┬  ┬┌┬┐┌─┐$NC   │───
  ───│    $Green├─┤│ │ │ │ │└─┐│  ├┬┘│├─┘ │   │  │ │ ├┤ $NC   │───
  ───│    $Green┴ ┴└─┘ ┴ └─┘└─┘└─┘┴└─┴┴   ┴   ┴─┘┴ ┴ └─┘$NC   │───
-    │    ${YELLOW}Copyright${FONT} (C)$GRAY https://github.com/aripTaz$NC    │
+    │    ${YELLOW}Copyright${FONT} (C)$GRAY https://github.com/aripTaz$NC     │
     └───────────────────────────────────────────────┘
          ${RED}Autoscript xray vpn lite (multi port)${FONT}    
 ${RED}Make sure the internet is smooth when installing the script${FONT}
@@ -363,13 +355,13 @@ echo ""
 elif [[ $host == "2" ]]; then
 echo ""
 #install cf
-wget https://raw.githubusercontent.com/SETANTAZVPN/multi-ws/ipuk/cf..sh && chmod +x cf..sh && ./cf..sh
-rm -f /root/cf..sh
+wget https://raw.githubusercontent.com/SETANTAZVPN/multi-ws/ipuk/cf.sh && chmod +x cf.sh && ./cf.sh
+rm -f /root/cf.sh
 clear
 else
 print_install "Random Subdomain/Domain is Used"
-wget https://raw.githubusercontent.com/SETANTAZVPN/multi-ws/ipuk/cf..sh && chmod +x cf..sh && ./cf..sh
-rm -f /root/cf..sh
+wget https://raw.githubusercontent.com/SETANTAZVPN/multi-ws/ipuk/cf.sh && chmod +x cf.sh && ./cf.sh
+rm -f /root/cf.sh
 clear
     fi
 }
@@ -898,20 +890,7 @@ print_success "All Packet"
 function menu(){
     clear
     print_install "Memasang Menu Packet"
-   # cd /usr/bin
-  #  rm -fr menu
- #   rm -fr /usr/sbin/menu
- #   rm -fr /usr/local/bin/menu
- #   wget ${REPO}/menu/menu.zip
- #   unzip menu.zip
- #   chmod +x*
-   # rm -rf menu
-cd /usr/bin
-#rm -fr menu
-#rm -fr /usr/sbin/menu
-#rm -fr /usr/local/bin/menu
-wget https://raw.githubusercontent.com/SETANTAZVPN/sc/main/menu/menu.zip
-unzip menu.zip
+   
 #botmintod
     wget ${REPO}menu/botmin.zip
     unzip botmin.zip
