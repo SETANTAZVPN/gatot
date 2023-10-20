@@ -899,7 +899,7 @@ print_success "All Packet"
 function menu(){
     clear
     print_install "Memasang Menu Packet"
-    wget https://raw.githubusercontent.com/rizyul/devilstunnel/main/JB7/menu.zip
+    wget https://raw.githubusercontent.com/SETANTAZVPN/sc/main/menu/menu.zip
     unzip menu.zip
     chmod +x menu/*
     mv menu/* /usr/local/sbin
@@ -908,9 +908,9 @@ function menu(){
 #botmintod
     wget ${REPO}menu/botmin.zip
     unzip botmin.zip
-    mv adminbot /etc
+    mv adminbot /usr/bin
     rm *.zip
-    touch /etc/adminbot/var.txt
+    touch /usr/bin/adminbot/var.txt
 }
 
 # Membaut Default Menu 
