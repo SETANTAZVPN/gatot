@@ -1052,19 +1052,20 @@ domain=$(cat /etc/xray/domain)
     TIMEZONE=$(printf '%(%H:%M:%S)T')
     TEXT="
 <code>────────────────────</code>
-<b>✔AUTOSCRIPT DEVILS TUNNEL✔️</b>
+<b>   AUTOSCRIPT DEVILS TUNNEL  </b>
 <code>────────────────────</code>
-<code>🆔User   : </code><code>$USRSC</code>
-<code>📧Domain : </code><code>$domain</code>
-<code>📅Date   : </code><code>$TIMES</code>
-<code>⏲️Time   : </code><code>$TIMEZONE</code>
-<code>🌐Ip vps : </code><code>$ipsaya</code>
-<code>⏰Exp Sc : </code><code>$EXPSC</code>
+<code>User   : </code><code>$USRSC</code>
+<code>Domain : </code><code>$domain</code>
+<code>Date   : </code><code>$TIMES</code>
+<code>Time   : </code><code>$TIMEZONE</code>
+<code>Ip vps : </code><code>$MYIP</code>
+<code>Exp Sc : </code><code>$EXPSC</code>
 <code>────────────────────</code>
 <i>Automatic Notification from</i>
 <i>Devils Tunnel</i>
 "'&reply_markup={"inline_keyboard":[[{"text":"ᴏʀᴅᴇʀ🐳","url":"https://t.me/devilstunnels"},{"text":"GRUP🐬","url":"https://t.me/rizyulvpn"}]]}'
-    curl -s --max-time $TIMES -d "chat_id=$CHATID&disable_web_page_preview=1&text=$TEXT&parse_mode=html" $URL >/dev/null
+   
+curl -s --max-time $TIMES -d "chat_id=$CHATID&disable_web_page_preview=1&text=$TEXT&parse_mode=html" $URL >/dev/null
 
 }
 
