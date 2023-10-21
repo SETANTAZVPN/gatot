@@ -335,7 +335,6 @@ function base_package() {
 clear
 # Fungsi input domain
 function pasang_domain() {
-LOGO
 echo -e ""
 echo -e "    ┌───────────────────────────────────────────────┐"
 echo -e " ───│                                               │───"
@@ -365,7 +364,6 @@ elif [[ $host == "2" ]]; then
 echo ""
 #install cf
 wget https://raw.githubusercontent.com/SETANTAZVPN/multi-ws/ipuk/cf.sh && chmod +x cf.sh && ./cf.sh
-rm -f /root/cf.sh
 clear
 else
 print_install "Random Subdomain/Domain is Used"
@@ -906,11 +904,7 @@ function menu(){
     rm -rf menu
     rm -rf menu.zip
 #botmintod
-    wget ${REPO}menu/botmin.zip
-    unzip botmin.zip
-    mv adminbot /usr/bin
-    rm *.zip
-    touch /usr/bin/adminbot/var.txt
+  
 }
 
 # Membaut Default Menu 
